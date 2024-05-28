@@ -1,0 +1,24 @@
+package com.project.register.service;
+
+import com.project.register.model.Member;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+public class MemberService {
+
+    private List<Member> members = new ArrayList<>();
+
+    public void save(Member member) {
+        members.add(member);
+    }
+
+    public boolean emailExists(String email) {
+        return members.stream().anyMatch(member -> member.getEmail().equals(email));
+    }
+
+    // Additional methods for member management can be added here
+}
+

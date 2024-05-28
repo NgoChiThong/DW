@@ -1,0 +1,31 @@
+package com.project.register.model;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+import java.util.Date;
+
+public class Member {
+    @NotEmpty(message = "Bạn không thể để trống dữ liệu này")
+    @Email(message = "Email không hợp lệ. Thử lại.")
+    private String email;
+
+    @NotEmpty(message = "Bạn không thể để trống dữ liệu này")
+    @Size(min = 8, message = "Mật khẩu có ít nhất 8 ký tự. Thử lại.")
+    private String password;
+
+    @NotEmpty(message = "Bạn không thể để trống dữ liệu này")
+    private String name;
+
+    private Date birthDate;
+
+    private String gender;
+
+    private String education;
+
+    private String address;
+
+    private String phone;
+
+    // Getters and Setters
+}

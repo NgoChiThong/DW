@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <h2>Đăng ký thành viên</h2>
+    <form th:action="@{/register}" th:object="${member}" method="post">
+        <div>
+            <label>Email:</label>
+            <input type="email" th:field="*{email}" />
+            <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+        </div>
+        <div>
+            <label>Mật khẩu:</label>
+            <input type="password" th:field="*{password}" />
+            <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+        </div>
+        <div>
+            <label>Nhập lại mật khẩu:</label>
+            <input type="password" th:field="*{confirmPassword}" />
+            <div th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}"></div>
+        </div>
+        <div>
+            <label>Họ tên:</label>
+            <input type="text" th:field="*{name}" />
+            <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+        </div>
+        <div>
+            <label>Ngày sinh:</label>
+            <input type="text" th:field="*{birthDate}" />
+            <div th:if="${#fields.hasErrors('birthDate')}" th:errors="*{birthDate}"></div>
+        </div>
+        <div>
+            <label>Giới tính:</label>
+            <select th:field="*{gender}">
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+            </select>
+        </div>
+        <div>
+            <label>Trình độ văn hóa:</label>
+            <input type="text" th:field="*{education}" />
+        </div>
+        <div>
+            <label>Địa chỉ:</label>
+            <input type="text" th:field="*{address}" />
+        </div>
+        <div>
+            <label>Điện thoại:</label>
+            <input type="text" th:field="*{phone}" />
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("form").submit(function(event) {
+        event.preventDefault();
+        var formData = $(this).serialize();
+
+        $.ajax({
+            type: "POST",
+            url: "/register",
+            data: formData,
+            success: function(response) {
+                // Xử lý kết quả thành công
+                $("body").html(response);
+            },
+            error: function(response) {
+                // Xử lý lỗi
+                console.log("Error: ", response);
+            }
+        });
+    });
+});
+</script>
+</html>

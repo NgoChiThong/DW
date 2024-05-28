@@ -1,0 +1,41 @@
+body{
+    width: 80%;
+    margin: auto;
+}
+header {
+    display: flex;
+}
+.header {
+    margin-left: auto;
+    display: ruby;
+}
+
+table {
+    margin-top: 10px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+th{
+    border: 1px solid #dddddd;
+    background-color: #dddddd;
+    text-align: center;
+    font-size: large;
+}
+tr:nth-child(odd) {
+    background-color: rgb(128, 255, 255);
+}
+.content-table p,.content-table a {
+    margin: 0;
+}
+
+button a {
+    text-decoration: solid;
+    color: black;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký thành viên</title>
+</head>
+<body>
+    <form id="register">
+        <label for="email">* Địa chỉ Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">* Mật khẩu:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmPass">* Nhập lại mật khẩu:</label>
+        <input type="password" id="confirmPass" name="confirmPass" required>
+
+        <label for="name">* Họ tên:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="dob">* Ngày sinh:</label>
+        <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" required>
+
+        <label for="tdvanhoa">Trình độ văn hóa:</label>
+        <select id="tdvanhoa" name="tdvanhoa" required>
+            <option value="">Chọn trình độ văn hóa</option>
+            <option value="Tieu hoc">Tiểu học</option>
+            <option value="Trung hoc co so">Trung học cơ sở</option>
+            <option value="Trung hoc pho thong">Trung học phổ thông</option>
+            <option value="Dai hoc">Đại học</option>
+            <option value="Cao hoc">Cao học</option>
+        </select>
+
+        <label for="city">Thành phố:</label>
+        <select id="city" name="city" required>
+            <!-- Options will be populated by AJAX -->
+        </select>
+
+        <label for="district">Quận:</label>
+        <select id="district" name="district" required>
+            <!-- Options will be populated by AJAX -->
+        </select>
+
+        <label for="ward">Phường:</label>
+        <select id="ward" name="ward" required>
+            <!-- Options will be populated by AJAX -->
+        </select>
+
+        <label for="phone">Điện thoại:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

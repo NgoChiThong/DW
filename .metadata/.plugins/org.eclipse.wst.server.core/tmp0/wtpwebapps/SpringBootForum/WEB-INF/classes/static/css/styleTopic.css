@@ -1,0 +1,71 @@
+body{
+    width: 80%;
+    margin: auto;
+}
+header {
+    display: flex;
+}
+.header {
+    margin-left: auto;
+    display: ruby;
+}
+.content {
+    margin-bottom: 20px;
+}
+.content .content-date {
+    background-color: #dddddd;
+    margin: 1px 1px 1px 0;
+}
+.content .row {
+    display: flex;
+    flex-direction: row;
+}
+
+.content .row .row-left {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* căn giữa theo chiều dọc */
+    align-items: center; /* căn giữa theo chiều ngang */
+    background-color: #d5ffb0;
+}
+
+.content .row .row-left p {
+    margin: 0 auto auto;
+}
+.content .row .row-left b {
+    margin: auto auto 0;
+}
+.content .row .row-right {
+    margin-left: 1px;
+    width: 79%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* căn giữa theo chiều dọc */
+}
+
+.content .row .row-right .top {
+    width: 101%;
+    background-color: #bdfdff;
+    display: flex;
+        flex-direction: row;
+    justify-content: space-between;
+}
+.content .row .row-right .top .a{
+    margin-right: 5px;
+}
+
+.content .row .row-right .top .top-left{
+    order: 1;
+}
+.content .row .row-right .top .top-right{
+    order: 2;
+}
+
+footer {
+    display: flex;
+}
+.footer {
+    margin-left: auto;
+    display: ruby;
+}
